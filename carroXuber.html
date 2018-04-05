@@ -7,7 +7,7 @@ var gasolina = parseFloat(prompt("Informe o valor da gasolina"));
 var preco_total = gasolina+estacionamento;
 document.write("<h3>Carro:</h3>");
 document.write("Preço estacionamento: R$"+estacionamento+",00<br>");
-document.write("Preço Gasolina: R$"+gasolina+"<br>");
+document.write("Preço Gasolina: R$"+gasolina.toString().replace(".",",")+"<br>");
 document.write("Preço total: R$"+preco_total+"<br>");
 
 document.write("<h3>Uber:</h3>");
