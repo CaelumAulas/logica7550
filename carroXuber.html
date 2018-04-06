@@ -7,11 +7,18 @@ var gasolina = parseFloat(prompt("Informe o valor da gasolina").replace(",",".")
 var preco_total = gasolina+estacionamento;
 var tempo = 25;//em minutos
 var preco_uber = distancia*1.4+2+tempo*0.26;
+var decimal;
+function transforma_decimal_em_texto() {
+    return decimal.toFixed(2).replace(".",",");
+}
 
 document.write("<h3>Carro:</h3>");
-document.write("Preço estacionamento: R$"+estacionamento.toFixed(2).replace(".",",")+"<br>");
-document.write("Preço Gasolina: R$"+gasolina.toFixed(2).replace(".",",")+"<br>");
-document.write("Preço total: R$"+preco_total.toFixed(2).replace(".",",")+"<br>");
+decimal = estacionamento;
+document.write("Preço estacionamento: R$"+transforma_decimal_em_texto()+"<br>");
+decimal = gasolina;
+document.write("Preço Gasolina: R$"+transforma_decimal_em_texto()+"<br>");
+decimal = preco_total;
+document.write("Preço total: R$"+transforma_decimal_em_texto()+"<br>");
 
 document.write("<h3>Uber:</h3>");
 document.write("Preço corrida: R$"+preco_uber.toFixed(2).replace(".",","));
