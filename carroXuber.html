@@ -5,11 +5,14 @@ document.write("Distância: "+distancia+"km<br>");
 var estacionamento=parseFloat(prompt("Informe o valor do estacionamento em R$").replace(",","."));
 var gasolina = parseFloat(prompt("Informe o valor da gasolina").replace(",","."));
 var preco_total = gasolina+estacionamento;
+var tempo = 25;//em minutos
+var preco_uber = distancia*1.4+2+tempo*0.26;
+
 document.write("<h3>Carro:</h3>");
 document.write("Preço estacionamento: R$"+estacionamento.toFixed(2).replace(".",",")+"<br>");
 document.write("Preço Gasolina: R$"+gasolina.toFixed(2).replace(".",",")+"<br>");
 document.write("Preço total: R$"+preco_total.toFixed(2).replace(".",",")+"<br>");
 
 document.write("<h3>Uber:</h3>");
-document.write("Preço corrida: R$25,73");
+document.write("Preço corrida: R$"+preco_uber.toFixed(2).replace(".",","));
 </script>
