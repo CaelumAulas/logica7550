@@ -1,12 +1,6 @@
 <meta charset="utf-8">
+<script src="funcoes.js"></script>
 <script>
-    function recebe_numero_do_usuario() {
-        return parseFloat(prompt(texto).replace(",",".").replace("o","0"));
-    }
-    function transforma_decimal_em_texto() {
-        return decimal.toFixed(2).replace(".",",");
-    }
-    
     var texto;
     texto = "Informe o seu peso";
     var peso = recebe_numero_do_usuario();
