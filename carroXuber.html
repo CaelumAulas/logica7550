@@ -7,9 +7,12 @@
         return decimal.toFixed(2).replace(".",",");
     }
     var texto;
+    var decimal;
+
     texto = "Informe a distância percorrida em km";
     var distancia = recebe_numero_do_usuario();
-    document.write("Distância: "+distancia+"km<br>");
+    decimal = distancia;
+    document.write("Distância: "+transforma_decimal_em_texto()+"km<br>");
     texto = "Informe o valor do estacionamento em R$";
     var estacionamento=recebe_numero_do_usuario();
     texto = "Informe o valor da gasolina";
@@ -17,7 +20,6 @@
     var preco_total = gasolina+estacionamento;
     var tempo = 25;//em minutos
     var preco_uber = distancia*1.4+2+tempo*0.26;
-    var decimal;
 
     document.write("<h3>Carro:</h3>");
     decimal = estacionamento;
